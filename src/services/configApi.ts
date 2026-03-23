@@ -69,15 +69,7 @@ export async function exportBackup(): Promise<void> {
 
   // Settings (includes HA settings, theme, camera controls, etc.)
   const settings = getSettings();
-  // Strip the HA token from the export for security — keep url/port
-  const exportSettings: AppSettings = {
-    ...settings,
-    connection: {
-      ...settings.connection,
-      haSettings: { ...settings.connection.haSettings, token: '' },
-    },
-  };
-  zip.file('settings.json', JSON.stringify(exportSettings, null, 2));
+  zip.file('settings.json', JSON.stringify(settings, null, 2));
 
   // Model from IndexedDB
   const modelBlob = await dbGetModel();
