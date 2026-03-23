@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {
-  Server, Palette, Box, MonitorCloud, Hand, Cog,
+  Server, Palette, Box, MonitorCloud, Hand, Cog, Info,
   Lightbulb, LayoutTemplate, ChevronLeft, X,
   Monitor, Smartphone, Search, RotateCw, Move,
+  Github, HeartHandshake, Scale,
 } from 'lucide-react';
 import type { HAConnectionStatus } from '../services/haWebSocket';
 import type { HASettings } from '../types';
@@ -19,7 +20,7 @@ import {
 } from '../contexts/ThemeContext';
 import './SettingsModal.css';
 
-type Section = 'main' | 'connection' | 'appearance' | 'render' | 'environment' | 'controls' | 'system';
+type Section = 'main' | 'connection' | 'appearance' | 'render' | 'environment' | 'controls' | 'system' | 'infos';
 
 interface Props {
   open: boolean;
@@ -81,6 +82,7 @@ const SECTIONS: { key: Section; label: string; icon: typeof Server }[] = [
   { key: 'environment', label: 'Environment', icon: MonitorCloud },
   { key: 'controls', label: 'Controls', icon: Hand },
   { key: 'system', label: 'System', icon: Cog },
+  { key: 'infos', label: 'Infos', icon: Info },
 ];
 
 export default function SettingsModal({
@@ -847,6 +849,38 @@ export default function SettingsModal({
             )}
 
             {/* System */}
+            {(section === 'infos' || (animating && prevSection === 'infos')) && (
+              <div className="settings-page">
+                <div className="settings-section">
+                  <div className="settings-section-label">Repository</div>
+                  <a
+                    className="settings-action-btn settings-repo-link"
+                    href="https://github.com/Kdcius/3Dash_webapp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github size={16} strokeWidth={1.5} />
+                    <span>3Dash_webapp</span>
+                  </a>
+                </div>
+
+                <div className="settings-section">
+                  <div className="settings-section-label">License</div>
+                  <div className="settings-infos-license">
+                    <Scale size={16} strokeWidth={1.5} />
+                    <span>Apache-2.0</span>
+                  </div>
+                </div>
+
+                <div className="settings-divider" />
+
+                <div className="settings-infos-footer">
+                  <HeartHandshake size={16} strokeWidth={1.5} />
+                  <span>Built with love in Montpellier</span>
+                </div>
+              </div>
+            )}
+
             {(section === 'system' || (animating && prevSection === 'system')) && (
               <div className="settings-page">
                 <div className="settings-section">

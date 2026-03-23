@@ -535,6 +535,32 @@
   }
 }
 
+/* Infos section */
+.settings-repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+}
+
+.settings-infos-license {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--text);
+}
+
+.settings-infos-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
 /* Checkbox group */
 .settings-checkbox-group {
   display: flex;

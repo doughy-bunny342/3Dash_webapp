@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { Sun, Moon } from 'lucide-react';
+import { Sun, Moon, Github } from 'lucide-react';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useDemoMode } from '../../contexts/DemoModeContext';
 import { getConfig, updateConfig, importBackup, getModelBlob } from '../../services/configApi';
@@ -289,6 +289,16 @@ export default function Onboarding() {
 
         <div className="onboarding-nav-group" />
       </div>
+
+      <a
+        className="onboarding-github-link"
+        href="https://github.com/Kdcius/3Dash_webapp"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="View on GitHub"
+      >
+        <Github size={32} strokeWidth={1.5} />
+      </a>
     </div>
   );
 }
