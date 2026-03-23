@@ -33,6 +33,10 @@ No installation required. Your Home Assistant instance must be accessible over H
 
 The easiest way to self-host. Runs on the same machine as your Home Assistant instance.
 
+[![Add repository to Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fkdcius%2F3Dash_webapp)
+
+Or manually:
+
 1. In Home Assistant, go to **Settings > Add-ons > Add-on Store**.
 2. Open the overflow menu and select **Repositories**.
 3. Add `https://github.com/kdcius/3Dash_webapp`.
