@@ -7,10 +7,12 @@ A 3D floorplan dashboard for Home Assistant. Load your own 3D model, map it to y
 Once the add-on is running, open 3Dash in your browser at:
 
 ```
-http://<your-ha-ip>:8099
+https://<your-ha-ip>:8099
 ```
 
-Replace `<your-ha-ip>` with the IP address of your Home Assistant machine (e.g. `http://192.168.1.100:8099`).
+Replace `<your-ha-ip>` with the IP address of your Home Assistant machine (e.g. `https://192.168.1.100:8099`).
+
+Your browser may show a certificate warning on first visit -- this is normal (self-signed SSL). Accept it to proceed.
 
 ## Features
 

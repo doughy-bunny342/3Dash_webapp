@@ -5,10 +5,10 @@
 Once the add-on is installed and running, open 3Dash in your browser at:
 
 ```
-http://<your-ha-ip>:8099
+https://<your-ha-ip>:8099
 ```
 
-Replace `<your-ha-ip>` with the IP address of your Home Assistant machine (e.g. `http://192.168.1.100:8099`).
+Replace `<your-ha-ip>` with the IP address of your Home Assistant machine (e.g. `https://192.168.1.100:8099`).
 
 The onboarding wizard will guide you through the initial setup:
 
@@ -32,7 +32,9 @@ All configuration happens in the browser -- no files to edit manually.
 
 ## SSL / HTTPS
 
-When running behind HTTPS, the add-on automatically uses `wss://` for the WebSocket connection. If you use a self-signed certificate, your browser must trust it for the connection to work.
+The add-on serves over HTTPS using a self-signed certificate generated on first start. This enables PWA installation and secure WebSocket connections.
+
+On your first visit, your browser will show a security warning -- this is expected with self-signed certificates. Accept the warning to proceed. You only need to do this once.
 
 ## Backup and restore
 

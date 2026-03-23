@@ -13,7 +13,7 @@ RUN npm run build -- --mode addon
 # Stage 2: Serve with nginx on HA base image
 FROM ${BUILD_FROM}
 
-RUN apk add --no-cache nginx
+RUN apk add --no-cache nginx openssl
 
 COPY --from=builder /app/dist /var/www/html
 COPY nginx.conf /etc/nginx/http.d/default.conf

@@ -41,9 +41,9 @@ Or manually:
 2. Open the overflow menu and select **Repositories**.
 3. Add `https://github.com/kdcius/3Dash_webapp`.
 4. Install **3Dash** from the store and start it.
-5. Open `http://<your-ha-ip>:8099` in your browser.
+5. Open `https://<your-ha-ip>:8099` in your browser.
 
-> When running behind HTTPS, the add-on automatically uses `wss://` for the WebSocket connection. If you use a self-signed certificate, your browser must trust it for the connection to work.
+> The add-on serves over HTTPS with a self-signed certificate (enables PWA install). Your browser will show a certificate warning on first visit -- accept it to proceed.
 
 ### Option 3 -- Self-host on any machine
 
