@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig(({ mode }) => {
-  const basePath = mode === 'addon' ? '/' : '/3Dash_webapp/';
+  const basePath = mode === 'addon' ? './' : '/3Dash_webapp/';
 
   return {
   base: basePath,
