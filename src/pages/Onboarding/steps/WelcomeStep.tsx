@@ -48,7 +48,7 @@ export default function WelcomeStep({ onConnect, onSimulation, onImport }: Props
           ref={fileRef}
           type="file"
           accept=".zip"
-          hidden
+          style={{ position: 'absolute', width: 0, height: 0, overflow: 'hidden', opacity: 0 }}
           onChange={(e) => {
             const file = e.target.files?.[0];
             if (file) handleFile(file);

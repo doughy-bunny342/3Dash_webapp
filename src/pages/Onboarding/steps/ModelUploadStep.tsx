@@ -72,7 +72,7 @@ export default function ModelUploadStep({ onComplete }: Props) {
         ref={inputRef}
         type="file"
         accept=".glb"
-        style={{ display: 'none' }}
+        style={{ position: 'absolute', width: 0, height: 0, overflow: 'hidden', opacity: 0 }}
         onChange={(e) => {
           const f = e.target.files?.[0];
           if (f) handleFile(f);

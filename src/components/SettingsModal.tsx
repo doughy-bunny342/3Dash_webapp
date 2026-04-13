@@ -939,7 +939,7 @@ export default function SettingsModal({
                       ref={importInputRef}
                       type="file"
                       accept=".zip"
-                      style={{ display: 'none' }}
+                      style={{ position: 'absolute', width: 0, height: 0, overflow: 'hidden', opacity: 0 }}
                       onChange={async (e) => {
                         const file = e.target.files?.[0];
                         if (!file) return;
