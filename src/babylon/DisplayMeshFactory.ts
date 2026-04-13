@@ -143,6 +143,7 @@ export function createDisplayMesh(
 
   plane.metadata = { displayId: cfg.id };
   plane.isPickable = false;
+  plane.applyFog = false;
 
   return { plane, texture, material, config: cfg, lastText: '' };
 }
