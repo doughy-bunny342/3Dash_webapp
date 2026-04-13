@@ -7,7 +7,7 @@ let shadowMesh: Mesh | null = null;
 let shadowMat: StandardMaterial | null = null;
 
 /** Radius of the circular ground grid (world units). */
-export const GRID_RADIUS = 50;
+export const GRID_RADIUS = 90;
 
 /**
  * Create or show a circular ground grid.

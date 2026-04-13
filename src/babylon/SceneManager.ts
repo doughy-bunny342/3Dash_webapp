@@ -54,8 +54,8 @@ export function createScene(
   // Linear fog to fade the ground grid edges into the background
   scene.fogMode = Scene.FOGMODE_LINEAR;
   scene.fogColor = new Color3(0.04, 0.055, 0.1);
-  scene.fogStart = 25;
-  scene.fogEnd = 50;
+  scene.fogStart = 70;
+  scene.fogEnd = 85;
 
   // Camera
   const camera = new ArcRotateCamera(
